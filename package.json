@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://splintercell9dev.github.io/react-demo-app",
+  "homepage": "http://splintercell9dev.github.io/react-demo-app",
   "dependencies": {
     "@monaco-editor/react": "^4.0.7",
     "@testing-library/jest-dom": "^5.11.9",
