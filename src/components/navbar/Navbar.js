@@ -1,6 +1,7 @@
 import React, { Component } from 'react' ;
 import { Navbar, Nav, Container, Image } from 'react-bootstrap' ;
 import { CaretDownFill } from 'react-bootstrap-icons' ;
+import logo from '../../images/logo192.png' ;
 
 class NavbarComponent extends Component{
     render(){
@@ -13,7 +14,7 @@ class NavbarComponent extends Component{
                         <Container className="pr-0">
                             <Nav.Link>Learn AI</Nav.Link>
                             <Nav.Link>Docs</Nav.Link>
-                            <Nav.Link><Image src="/images/logo192.png" className="navbar-avatar" rounded />Account <CaretDownFill /></Nav.Link>
+                            <Nav.Link><Image src={logo} className="navbar-avatar" rounded />Account <CaretDownFill /></Nav.Link>
                         </Container>
                     </Nav>
                 </Navbar.Collapse>

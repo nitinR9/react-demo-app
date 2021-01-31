@@ -5,6 +5,7 @@ import { PersonCircle } from 'react-bootstrap-icons' ;
 import nextId from 'react-id-generator' ;
 import axios from 'axios' ;
 import { LoadingComponent } from './Loading';
+import logo from '../../images/logo192.png' ;
 
 function ChatboxComponent(){
     const chat = useSelector(state => state.chatState) ;
@@ -71,7 +72,7 @@ function ChatboxComponent(){
                                 return (
                                     <li className="mt-3" key={`chat-list-${index}`}>
                                         <div className="d-flex justify-content-start align-content-center">
-                                            <img src="/images/logo192.png" alt="Avatar" className="human-chat-avatar align-self-center" />
+                                            <img src={logo} alt="Avatar" className="human-chat-avatar align-self-center" />
                                             <div className="msgbox ml-2 Text-Style-2">
                                                 { val.human.message }
                                             </div>
