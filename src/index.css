@@ -1,13 +1,273 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body{
+  width: 100%;
+  height: 100% ;
+}
+
+:root {
+  --pinkish-grey: #c6c6c6;
+  --greyish-brown: #454545;
+  --ice-blue: #f9fcff;
+  --turquoise: #0bc29f;
+  --bright-sky-blue: #00b1ff;
+  --dark-blue-grey: #1f2a55;
+  --azul: #2564ee;
+  --black: #171717;
+}
+
+#root{
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: Quicksand;
+  src: url(./fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.Text-Style {
+  font-family: Montserrat;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.Text-Style-2 {
+  font-family: Quicksand;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d3d3d3;
+}
+
+/* App styles */
+
+.navbar-avatar{
+  display: inline;
+  width: 20px ;
+  height: 20px ;
+  margin-right: 5px;
+}
+
+.App{
+  position: relative;
+  width: 100% ;
+  height: 100%;
+}
+
+.Navbar{
+  border-bottom: 2px solid var(--greyish-brown);
+}
+
+.Content{
+  width: 100%;
+  height: 100% ;
+  padding-top: 56px;
+}
+
+.Content-row{
+  height: 100%;
+}
+
+.Content-row > #Content-first-col{
+  border-right: 2px solid var(--greyish-brown);
+  border-bottom: none;
+}
+
+.Content-col{
+  overflow: hidden;
+}
+
+.Content-col > div.editor{
+  width: 100%;
+  height: calc(100% - 56px);
+  color: var(--ice-blue);
+}
+
+.Editor-tabs-container{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.Editor-tab{
+  border: 2px solid var(--greyish-brown);
+  border-bottom: none;
+  border-radius: 5px;
+  color: var(--pinkish-grey) ;
+  text-decoration: none;
+}
+
+button.Editor-tab-close{
+  background-color: transparent;
+  color: var(--pinkish-grey);
+  outline: none;
+  border: none;
+}
+
+.Editor-newtab{
+  padding-bottom: 3px;
+}
+
+.apply-container{
+  position: absolute;
+  right: 0;
+  top: 10% ;
+}
+
+button#addTab{
+  background-color: transparent;
+  outline: none;
+  color: var(--pinkish-grey) ;
+  border: none ;
+}
+
+div.Editor-tab > a{
+  font-size: 10pt;
+  cursor: context-menu;
+  text-decoration: none;
+  color: var(--pinkish-grey) ;
+}
+
+div.editor{
+  border-top: 2px solid var(--greyish-brown);
+}
+
+.Chatbox{
+  position: relative;
+}
+
+.Chatbox-container{
+  position: absolute;
+  top: 50% ;
+  left: 50% ;
+  transform: translate(-50%, -50%);
+  width: 80% ;
+  height: 80% ;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px 8px rgb(0 0 0 / 8%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Chatbox-chat-container{
+  position: relative;
+  height: calc(100% - 60px) ;
+  overflow: hidden;
+}
+
+ul#Chatbox-chat-list{
+  list-style: none;
+  color: var(--pinkish-grey) ;
+  width: 100% ;
+  height: 100% ;
+  overflow-y: scroll;
+}
+
+img.human-chat-avatar{
+  width: 25px ;
+  height: 25px ;
+}
+
+div.msgbox{
+  background-color: #404040;
+  padding: 15px ;
+  border-radius: 16px;
+  max-width: 50% ;
+  word-wrap: break-word ;
+}
+
+::-webkit-scrollbar{
+  width: 0 ;
+  background: transparent;
+}
+
+div.Chatbox-input-container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid var(--black);
+}
+
+div.loading{
+  width: 100% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.loading > div.dot{
+  display: inline-block;
+  border: 3px solid rgb(143, 143, 143);
+  border-radius: 50%;
+  animation: blink 2s infinite alternate;
+}
+
+div.loading > div.dot-2{
+  animation-delay: 250ms;
+}
+
+div.loading > div.dot-3{
+  animation-delay: 500ms;
+}
+
+
+
+@keyframes blink{
+  0%, 100% {
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+input[type="text"]{
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--pinkish-grey) ;
+}
+
+
+@media (max-width: 768px){
+  .Content-row > #Content-first-col{
+      border-bottom: 2px solid var(--greyish-brown);
+      border-right: none;
+  }
+
+  .Content-col{
+    height: 50%;
+  }
+
+  .Chatbox-container{
+    width: 100% ;
+    height: 90% ;
+  }
 }
