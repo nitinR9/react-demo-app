@@ -7,7 +7,7 @@ class NavbarComponent extends Component{
     render(){
         return (
             <Navbar collapseOnSelect className="Navbar" expand="sm" variant="dark" fixed="top">
-                <Navbar.Brand className="Text-Style ml-2">AI Playground</Navbar.Brand>
+                <Navbar.Brand className="Text-Style title-navbar ml-2">AI Playground</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-nav" />
                 <Navbar.Collapse id="responsive-nav">
                     <Nav className="ml-auto Text-Style-2">

@@ -82,6 +82,10 @@ html, body{
   border-bottom: 2px solid var(--greyish-brown);
 }
 
+.title-navbar{
+  font-size: 18pt ;
+}
+
 .Content{
   width: 100%;
   height: 100% ;
